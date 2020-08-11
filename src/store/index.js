@@ -1,12 +1,30 @@
-/*
-* vuex的核心管理对象
-* */
 import Vue from 'vue'
 import Vuex from 'vuex'
-import actions from './actions'
-import getters from './getters'
-import mutations from './mutations'
-import state from  './state'
+import router from '@/router'
+import { fliterRoutes } from "../filters";
+
+const state = {
+  sliderRoutes:[]
+}
+
+
+const actions =  {
+  setSliderRoutes({ commit }){
+    const sliderRoutes = fliterRoutes(router.options.routes)
+    commit('SET_SLIDERROUTES', sliderRoutes)
+  }
+}
+
+
+const mutations =  {
+  SET_SLIDERROUTES(state, sliderRoutes){
+    state.sliderRoutes = sliderRoutes
+  }
+}
+
+
+const getters =  {}
+
 
 Vue.use(Vuex);
 

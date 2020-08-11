@@ -1,20 +1,12 @@
 <template>
   <div id="app" >
-      <HeaderTop/>
-      <router-view></router-view>
-      <Footer/>
-      <ToTop/>
+    <router-view />
   </div>
 </template>
 
 <script>
-  import HeaderTop from './components/HeaderTop/HeaderTop'
-  import Footer from './components/Footer/Footer'
-  import ToTop from './components/ToTop/ToTop'
-
   export default {
   name: 'App',
-  components:{HeaderTop,Footer,ToTop},
 }
 </script>
 

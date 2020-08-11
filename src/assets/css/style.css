@@ -17,6 +17,8 @@ html, body{
   font-family: 'PingFangSC-Regular', 'helvetica neue', tahoma, 'PingFang SC', 'microsoft yahei', arial, 'hiragino sans gb', sans-serif;
   background:#ffffff;
 	margin: 0;
+  color: #444;
+  line-height: 1.5em;
 }
 p,ul li,ol li{
 	margin:0;
@@ -25,9 +27,10 @@ p,ul li,ol li{
   /*line-height:20px*/
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Raleway', sans-serif;
+  font-family: TencentSansw7;
 	font-weight: 700;
-  margin-bottom:20px
+  margin-bottom:2%;
+  line-height: 1.5em;
 }
 ul,label{
 	margin:0;
@@ -36,6 +39,10 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
+label{
+  color: #999;
+  margin-bottom: 10px;
+}
 input[type="submit"],input[type="reset"],a,.w3ls_team_grid1_pos ul li{
 	-webkit-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
@@ -43,6 +50,21 @@ input[type="submit"],input[type="reset"],a,.w3ls_team_grid1_pos ul li{
     -o-transition: 0.5s ease-in;
     transition:0.5s ease-in;
 }
+input[type='text']{
+  font-size:14px;
+  border: 1px solid rgba(196,196,196,.4);
+  padding: 5px 8px;
+}
+input[type='text']:focus,input[type='textarea']:focus, textarea:focus{
+  border-color: rgba(140,140,140,.8);
+  box-shadow : 0 0 8px rgba(200,200,200,.6);
+  outline: none
+}
+input[type='textarea'], textarea{
+  font-size:14px;
+  border: 1px solid rgba(196,196,196,.4);
+}
+
 button.submit{
   background-color: #f8b239;
   border: inherit;
@@ -72,6 +94,8 @@ button.submit::after{
 button.submit:hover::after {
   width: 100%;
 }
+
+
 /*工具类*/
 .blankele{border-top:1px transparent solid ;}  /*消除margin击穿*/
 .ellipsis{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }/*省略号*/
@@ -81,3 +105,18 @@ button.submit:hover::after {
   top: 80px
 }
 
+.fa{
+  margin-right: 5px;
+  width: 10px;
+}
+
+.title{
+  font-family:TencentSansw7 ;
+  font-size: 30px;
+}
+
+.second-title{
+  font-family:TencentSansw7 ;
+  margin: 20px 0;
+  font-size: 24px;
+}

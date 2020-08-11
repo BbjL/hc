@@ -1,32 +1,39 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
 import router  from './router/index'
-import ElementUI from 'element-ui';         //element-ui
-import 'element-ui/lib/theme-chalk/index.css';
+import store from '@/store/index'
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 import '../static/css/reset.css'   //默认样式
-import $ from 'jquery'
+
 import 'animate.css'                        //animate
-import '../static/css/style.css'
+import './assets/css/style.css'
 import 'font-awesome/css/font-awesome.css'    //图标库
-import VueAwesomeSwiper from 'vue-awesome-swiper'   //swiper
-import 'swiper/dist/css/swiper.css'
 
 require('@/mock/groups')
 
 import axios from 'axios' // 引入axios
-
-Vue.use(VueAwesomeSwiper);
-Vue.use(ElementUI);
 Vue.prototype.$http = axios
 
-/* eslint-disable no-new */
+import swal from 'sweetalert'   //alert
+Vue.prototype.$swal = swal
+
+import VueAwesomeSwiper from 'vue-awesome-swiper'   //swiper
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper);
+
+import { Plugin } from 'vue-fragment'  //去除组件包含标签
+Vue.use(Plugin)
+
+import vueMiniPlayer from 'vue-mini-player' // video
+import 'vue-mini-player/lib/vue-mini-player.css'
+Vue.use(vueMiniPlayer)
+
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
 
