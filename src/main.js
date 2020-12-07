@@ -1,39 +1,25 @@
-import Vue from 'vue'
-import App from './App'
-import router  from './router/index'
-import store from '@/store/index'
+import Vue from "vue";
+import App from "./App";
+import router from "./router/index";
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/js/bootstrap.js'
-import '../static/css/reset.css'   //默认样式
+import "font-awesome/css/font-awesome.css"; //图标库
+import "jquery";
 
-import 'animate.css'                        //animate
-import './assets/css/style.css'
-import 'font-awesome/css/font-awesome.css'    //图标库
+import "./plugins";
+import "./styles/style.css";
 
-require('@/mock/groups')
-
-import axios from 'axios' // 引入axios
-Vue.prototype.$http = axios
-
-import swal from 'sweetalert'   //alert
-Vue.prototype.$swal = swal
-
-import VueAwesomeSwiper from 'vue-awesome-swiper'   //swiper
-import 'swiper/dist/css/swiper.css'
-Vue.use(VueAwesomeSwiper);
-
-import { Plugin } from 'vue-fragment'  //去除组件包含标签
-Vue.use(Plugin)
-
-import vueMiniPlayer from 'vue-mini-player' // video
-import 'vue-mini-player/lib/vue-mini-player.css'
-Vue.use(vueMiniPlayer)
+// if (process.env.VUE_APP_MOCK === "true" && process.env.NODE_ENV === "development") {
+// }
+require("../mock/index");
 
 new Vue({
-  el: '#app',
+  el: "#app",
   router,
-  store,
-  render: h => h(App)
-})
+  render: (h) => h(App),
+});
 
+// eslint-disable-next-line
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0);
+  next();
+});
