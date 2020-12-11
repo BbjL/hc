@@ -22,7 +22,7 @@ const router = new Router({
       children: [
         {
           path: "/home/all",
-          component: () => import("../views/home/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/home/index"),
         },
       ],
     },
@@ -37,12 +37,12 @@ const router = new Router({
       children: [
         {
           path: "/groups/list",
-          component: () => import("@/views/groupsList/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/groupsList/index"),
           meta: { title: "组别列表", nextRoute: "/groups/list/info" },
         },
         {
           path: "/groups/list/info",
-          component: () => import("@/views/groupsInfo/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/groupsInfo/index"),
           meta: {
             title: "详细内容",
             notOpacity: true,
@@ -61,7 +61,7 @@ const router = new Router({
       children: [
         {
           path: "/message/all",
-          component: () => import("@/views/infomation/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/infomation/index"),
         },
       ],
     },
@@ -75,7 +75,7 @@ const router = new Router({
       children: [
         {
           path: "/elegant/list",
-          component: () => import("@/views/teamViewList/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/teamViewList/index"),
           meta: {
             title: "风采列表",
             notOpacity: true,
@@ -84,7 +84,7 @@ const router = new Router({
         },
         {
           path: "/elegant/list/info",
-          component: () => import("@/views/teamViewInfo/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/teamViewInfo/index"),
           meta: {
             title: "详细内容",
             notOpacity: true,
@@ -103,7 +103,7 @@ const router = new Router({
       children: [
         {
           path: "/surround/list",
-          component: () => import("@/views/teamViewList/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/teamViewList/index"),
           meta: {
             title: "氛围列表",
             notOpacity: true,
@@ -112,7 +112,7 @@ const router = new Router({
         },
         {
           path: "/surround/list/info",
-          component: () => import("@/views/teamViewInfo/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/teamViewInfo/index"),
           meta: {
             title: "详细内容",
             notOpacity: true,
@@ -132,7 +132,7 @@ const router = new Router({
       children: [
         {
           path: "/project/list",
-          component: () => import("@/views/projectsList/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/projectsList/index"),
           meta: {
             title: "团队项目",
             notOpacity: true,
@@ -141,7 +141,7 @@ const router = new Router({
         },
         {
           path: "/project/list/info",
-          component: () => import("@/views/projectInfo/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/projectInfo/index"),
           meta: {
             title: "浏览项目",
             notOpacity: true,
@@ -160,7 +160,7 @@ const router = new Router({
       children: [
         {
           path: "/videos/list",
-          component: () => import("@/views/videosList/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/videosList/index"),
           meta: {
             title: "科研视频",
             notOpacity: true,
@@ -168,7 +168,7 @@ const router = new Router({
         },
         {
           path: "/videos/list/info",
-          component: () => import("@/views/videoInfo/index"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/videoInfo/index"),
           meta: {
             title: "浏览视频",
             notOpacity: true,
@@ -187,7 +187,7 @@ const router = new Router({
       children: [
         {
           path: "/honor/all",
-          component: () => import("@/views/teamHonor"),
+          component: () => import(/* webpackChunkName: "client-index" */ "@/views/teamHonor"),
         },
       ],
     },
