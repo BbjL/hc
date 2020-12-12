@@ -138,9 +138,5 @@ module.exports = {
       warnings: false,
       errors: false,
     },
-<<<<<<< HEAD
   },
-=======
-  }
->>>>>>> 1dd1c63bcb34b0b69c915ac754cdaea8fe402688
 };
