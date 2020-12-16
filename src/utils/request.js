@@ -1,5 +1,5 @@
 import axios from "axios";
-import router from "@/router/index";
+import router from "@client/router/index";
 
 export default function request({ url, data, type = "GET" }) {
   return new Promise((resolve, reject) => {
@@ -20,7 +20,7 @@ export default function request({ url, data, type = "GET" }) {
         promise = axios.get(_url);
         break;
       case "POST":
-        promise = axios.post(_url);
+        promise = axios.post(_url, data);
         break;
     }
 
