@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import { reqProjs } from '@client/api/index'
+import { reqProjs } from "@client/api/index";
 
 export default {
   name: "TeamProjects",
@@ -81,11 +81,9 @@ export default {
     };
   },
   mounted() {
-
-    reqProjs().then(res => {
+    reqProjs().then((res) => {
       this.projects = res.data.projs;
-    })
-
+    });
   },
   methods: {
     //跳转路由
@@ -172,15 +170,15 @@ export default {
   top: 0px;
 }
 .resp_area .slide_list li .img1 {
-  background: url(./img/index_resp_bg1.jpg) no-repeat center center;
+  background: url('./img/index_resp_bg1.jpg') no-repeat center center;
   background-size: cover;
 }
 .resp_area .slide_list li .img2 {
-  background: url(./img/index_resp_bg2.jpg) no-repeat center center;
+  background: url('./img/index_resp_bg2.jpg') no-repeat center center;
   background-size: cover;
 }
 .resp_area .slide_list li .img3 {
-  background: url(./img/index_resp_bg3.jpg) no-repeat center center;
+  background: url('./img/index_resp_bg3.jpg') no-repeat center center;
   background-size: cover;
 }
 .resp_area .slide_list li .tit {
@@ -213,7 +211,7 @@ export default {
   display: block;
   width: 45px;
   height: 620px;
-  background: url(./img/i_tri.png) no-repeat 0 0;
+  background: url('./img/i_tri.png') no-repeat 0 0;
   background-size: contain;
   position: absolute;
   right: -3px;
@@ -222,7 +220,7 @@ export default {
 .resp_area .slide_area .icon_arrow_r {
   left: auto;
   right: 98px;
-  background: url(./img/sli-right-icon.png) no-repeat center;
+  background: url('./img/sli-right-icon.png') no-repeat center;
   background-size: 10px 16px;
 }
 
@@ -265,7 +263,7 @@ export default {
   display: block;
   width: 38px;
   height: 16px;
-  background: url(./img/icon_arrow_r_dark.png) no-repeat 0 0;
+  background: url("./img/icon_arrow_r_dark.png") no-repeat 0 0;
   margin-left: 3px;
   background-size: 100% 100%;
 }
@@ -275,7 +273,7 @@ export default {
 }
 </style>
 
-<style lang="scss"  scoped>
+<style  scoped>
 .alert {
   position: absolute;
 }
@@ -317,7 +315,7 @@ export default {
   position: absolute;
   color: #fff;
   font-size: 40px;
-  font-family: TencentSansw7;
+  font-family: 'TencentSansw7';
   text-align: center;
   top: 150px;
   right: 100px;

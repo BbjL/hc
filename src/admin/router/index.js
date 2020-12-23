@@ -13,13 +13,15 @@ const router = [
   {
     path: "/login",
     name: "login",
-    component: () => import(/* webpackChunkName: "admin-index" */ "@admin/views/login/index"),
+    component: () =>
+      import(/* webpackChunkName: "admin-redirectPage", webpackPreload: true */ "@admin/views/login/index"),
     meta: { noShow: true, notReqLogin: true },
   },
   {
     path: "/404",
     name: "error",
-    component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/404/index"),
+    component: () =>
+      import(/* webpackChunkName: "admin-index" */ "@admin/views/404/index"),
     meta: { noShow: true, notReqLogin: true },
   },
   // home
@@ -28,12 +30,14 @@ const router = [
     name: "home",
     component: Layout,
     redirect: "/home/all",
-    meta: { noShow: true },
+    meta: { title: "总览", icon: "el-icon-s-data" },
     children: [
       {
         path: "/home/all",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/home/Home"),
-        meta: {},
+        component: () =>
+          import( 
+            /* webpackChunkName: "admin-redirectPage" */ "@admin/views/home/index"
+          ),
       },
     ],
   },
@@ -46,12 +50,18 @@ const router = [
     children: [
       {
         path: "/message/resource",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/resource/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/resource/index"
+          ),
         meta: { title: "实验室资源 " },
       },
       {
         path: "/message/regulation",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/regulation/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/regulation/index"
+          ),
         meta: { title: "管理制度 " },
       },
     ],
@@ -70,17 +80,26 @@ const router = [
     children: [
       {
         path: "/video/all",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/videos/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/videos/index"
+          ),
         meta: { title: "视频列表 " },
       },
       {
         path: "/video/edit",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/videos/edit/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/videos/edit/index"
+          ),
         meta: { title: "视频上传 ", noShow: true },
       },
       {
         path: "/video/detail",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/videos/detail/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/videos/detail/index"
+          ),
         meta: { title: "详细内容", noShow: true },
       },
     ],
@@ -95,12 +114,18 @@ const router = [
     children: [
       {
         path: "/teamele/all",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/elegant/index.vue"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/elegant/index.vue"
+          ),
         meta: { title: "所有列表 " },
       },
       {
         path: "/teamele/edit",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/elegant/edit"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/elegant/edit"
+          ),
         meta: { title: "上传风采 ", noShow: true },
       },
     ],
@@ -115,11 +140,17 @@ const router = [
     children: [
       {
         path: "/surround/all",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/surround/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/surround/index"
+          ),
       },
       {
         path: "/surround/edit",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/surround/edit/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/surround/edit/index"
+          ),
         meta: { title: "编辑氛围", noShow: true },
       },
     ],
@@ -134,12 +165,18 @@ const router = [
     children: [
       {
         path: "/projects/all",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/projects/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/projects/index"
+          ),
         meta: { title: "项目列表 " },
       },
       {
         path: "/projects/edit",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/projects/edit/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/projects/edit/index"
+          ),
         meta: { title: "编辑项目 ", noShow: true },
       },
     ],
@@ -154,13 +191,19 @@ const router = [
     children: [
       {
         path: "/members/all",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/members/index"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/members/index"
+          ),
         meta: { title: "成员列表 " },
       },
       {
         //添加或者更新成员
         path: "/members/edit",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/members/edit"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/members/edit"
+          ),
         meta: { title: "编辑成员 ", noShow: true },
       },
     ],
@@ -175,7 +218,8 @@ const router = [
     children: [
       {
         path: "/groups/all",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/groups"),
+        component: () =>
+          import(/* webpackChunkName: "admin-index" */ "@admin/views/groups"),
         meta: { title: "组别列表 " },
       },
     ],
@@ -190,13 +234,17 @@ const router = [
     children: [
       {
         path: "/awards/all",
-        component: () => import(/* webpackChunkName: "admin-index" */"@admin/views/awards"),
+        component: () =>
+          import(/* webpackChunkName: "admin-index" */ "@admin/views/awards"),
         meta: { title: "奖项列表 " },
       },
       {
         //添加或者更新成员
         path: "/awards/edit",
-        component: () => mport(/* webpackChunkName: "admin-index" */"@admin/views/awards/edit"),
+        component: () =>
+          import(
+            /* webpackChunkName: "admin-index" */ "@admin/views/awards/edit"
+          ),
         meta: { title: "编辑奖项 ", noShow: true },
       },
     ],
@@ -211,7 +259,8 @@ const router = [
     children: [
       {
         path: "/email/all",
-        component: () => mport(/* webpackChunkName: "admin-index" */"@admin/views/emails"),
+        component: () =>
+          import(/* webpackChunkName: "admin-index" */ "@admin/views/emails"),
       },
     ],
   },

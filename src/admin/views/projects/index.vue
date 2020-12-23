@@ -83,6 +83,14 @@
           width="150"
         >
         </el-table-column>
+        <el-table-column
+          prop="endDate"
+          align="center"
+          label="结束时间"
+          sortable=""
+          width="150"
+        >
+        </el-table-column>
         <el-table-column align="center" width="250" label="操作">
           <template slot-scope="scope">
             <el-button
@@ -128,7 +136,7 @@ export default {
 
     //请求表格数据
     async getTable() {
-      const res = await reqProjectList();
+      const res = await reqProjectList({pageNum: 1, pageSize: 10});
       if (res.data.status == 200) {
         this.initData = this.tableData = res.data.projects;
       }

@@ -8,7 +8,7 @@ const reqAwadsCertification = {
   response: () => {
 
     const certif1ications = [];
-    const num = Random.natural(10, 20);
+    const num = Random.natural(20, 30);
 
     for (let index = 0; index < num; index++) {
       certif1ications.push({

@@ -22,7 +22,7 @@ const router = new Router({
       children: [
         {
           path: "/home/all",
-          component: () => import(/* webpackChunkName: "client-index" */ "@client/views/home/index"),
+          component: () => import(/* webpackChunkName: "client-redirectPage",  webpackPreload: true */ "@client/views/home/index"),
         },
       ],
     },

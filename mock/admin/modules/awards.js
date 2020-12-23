@@ -42,7 +42,7 @@ const reqAwardsByGroup = {
     let awards = []
     const { awardGroup, pageNum, pageSize } = JSON.parse(options.body)
 
-    !pageNum || !pageSize ?  num = Random.natural(10, 20) : num = pageSize 
+    !pageNum || !pageSize ?  num = Random.natural(10, 20) : num = pageSize;
 
     for (let index = 0; index < num; index++) {
       awards.push({

@@ -22,9 +22,9 @@
             <i class="el-icon-arrow-down el-icon-setting"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item
-              ><a href="client.html">客户端</a></el-dropdown-item
-            >
+            <a href="index.html">
+              <el-dropdown-item>客户端</el-dropdown-item>
+            </a>
             <el-dropdown-item @click.native="logOut">退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
@@ -159,5 +159,9 @@ export default {
 .content-right .content-header .header-right {
   position: absolute;
   right: 30px;
+  cursor: pointer;
+}
+.content-right .content-header .header-right:hover {
+  color: rgb(8, 164, 236);
 }
 </style>

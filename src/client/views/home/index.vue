@@ -34,10 +34,10 @@
 </template>
 
 <script>
-import Carouse from "./components/Carouse/Carouse";
-import CardsList from "./components/CardsList/Cards";
-import Project from "./components/Project/Project";
-import Contact from "./components/Contact/Contact";
+import Carouse from "./components/Carouse/index";
+import CardsList from "./components/CardsList/index";
+import Project from "./components/Project/index";
+import Contact from "./components/Contact/index";
 
 export default {
   name: "Home",

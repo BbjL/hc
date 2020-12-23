@@ -61,14 +61,9 @@ export default {
   .buttom-social-grd ul li a {
     font-size: 15px;
     color: #000;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
   }
 
-  .buttom-social-grd ul li a:hover {
+  .buttom-social-grd ul li:hover  a{
     color:rgb(44, 190, 255);
   }
 

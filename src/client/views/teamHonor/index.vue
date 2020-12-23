@@ -3,15 +3,19 @@
     <div class="honer-header-image">
       <img src="@/assets/images/client/honor-head.jpg" alt="" class="w-100" />
     </div>
-    <div class="honor-content container">
+    <div class="honor-content">
       <h3 class="title">专利证书</h3>
-      <div class="honor-picture ">
+      <div class="honor-picture">
         <div
-          class="pictures-item "
+          class="pictures-item"
           v-for="(award, index) in certifications"
           :key="index"
         >
-          <ImageDuplicate :url="award.url" />
+          <img
+            style="width: 100%"
+            src="@/assets/images/client/awards/software-cup.jpg"
+            alt="software-cup.jpg"
+          />
         </div>
       </div>
       <h3 class="title">赛事奖项</h3>
@@ -21,7 +25,11 @@
           v-for="(award, index) in competions"
           :key="index"
         >
-          <ImageDuplicate :url="award.url" />
+          <img
+            style="width: 100%"
+            src="@/assets/images/client/awards/universityComputition-cup.jpg"
+            alt="universityComputition-cup.jpg"
+          />
         </div>
       </div>
     </div>
@@ -60,13 +68,16 @@ export default {
 .honor-content {
   min-height: 800px;
 }
-.honor-content .tit {
+.honor-content .title {
   font-family: TencentSansw7;
   font-size: 2em;
   margin-top: 50px;
+  margin-left: 70px;
   font-weight: 600;
-  text-align: center;
   color: #2385d5;
+  @media (max-width: 692px) {
+    margin-left: 18px;
+  }
 }
 .honor-content .honor-item {
   margin: 0 150px;

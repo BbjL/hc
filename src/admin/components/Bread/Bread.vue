@@ -4,7 +4,7 @@
       <el-breadcrumb-item
         :to="index === 0 ? item.path : ''"
         v-for="(item, index) in crumbs"
-        :key="item.path"
+        :key="index*1"
       >
         {{ item.meta.title }}
       </el-breadcrumb-item>

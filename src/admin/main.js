@@ -4,18 +4,16 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 
-import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
+import './plugins/element/index'
 import { Plugin } from "vue-fragment"; //去除多余跟标签
 
 import "./style/reset.css";
-import "./style/elementUI.css";
+import "./style/elementui.css";
 import "./style/main.css";
 import cookies from "@admin/utils/cookiesjs";
 import { getFormatTime } from "./utils/global";
 require("../../mock/admin");
 
-Vue.use(ElementUI);
 Vue.use(Plugin);
 Vue.prototype.$cookies = cookies;
 Vue.prototype.$getFormatTime = getFormatTime;
